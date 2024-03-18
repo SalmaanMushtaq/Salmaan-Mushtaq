@@ -19,8 +19,8 @@ body {
 
 /* for all social containers*/
 .socialContainer {
-  width: 52px;
-  height: 52px;
+  width: 30px;
+  height: 30px;
   display: flex;
   background-color: rgb(44, 44, 44);
   border-radius: 50%;

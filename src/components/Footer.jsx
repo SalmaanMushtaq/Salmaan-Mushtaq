@@ -6,9 +6,9 @@ function Footer() {
   const date = new Date().getFullYear();
   return (
     <footer className="mt-auto text-center py-8">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex flex-col justify-between items-center">
         <p>&copy; {date} Salmaan Mushtaq</p>
-        <small className="flex items-center gap-4">
+        <small className="flex items-center gap-1 mt-2">
           <a
             className="socialContainer containerOne"
             href="https://www.instagram.com/salmaan4746"

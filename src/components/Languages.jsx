@@ -9,7 +9,7 @@ function Languages() {
         </span>
         Languages
       </h1>
-      <div className="mt-8 grid grid-cols-3 gap-10 ms-10 ps-8">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 ms-10 ps-8">
         <Language
           name="Kashmiri"
           proficiency="(Native)"
@@ -18,7 +18,7 @@ function Languages() {
         <Language
           name="English"
           proficiency="(Intermediate)"
-          progress={[80, 70, 100]} // Progress for Speaking, Writing, Comprehension
+          progress={[80, 70, 70]} // Progress for Speaking, Writing, Comprehension
         />
         <Language
           name="Urdu"
@@ -28,7 +28,7 @@ function Languages() {
         <Language
           name="Hindi"
           proficiency="(Basic)"
-          progress={[90, 0, 100]} // Progress for Speaking, Writing, Comprehension
+          progress={[60, 0, 50]} // Progress for Speaking, Writing, Comprehension
         />
       </div>
       {/* <div>

@@ -13,24 +13,24 @@ function Language({ name, proficiency, progress }) {
         </h2>
         <span className="ms-10 text-basic font-semibold">{proficiency}</span>
       </div>
-      <div className="gap-1 flex flex-col justify-between">
+      <div className="gap-2 flex flex-col justify-between">
         {progress.map((value, index) => (
-          <div key={index} className="bg-background h-full rounded-full">
+          <div key={index} className="bg-background h-6 rounded-full">
             <div
-              className="bg-basic h-full rounded-full"
+              className="bg-basic h-6 rounded-full"
               style={{ width: `${value}%` }}
             ></div>
           </div>
         ))}
       </div>
-      <div className="gap-1 flex flex-col justify-around">
-        <button className="p-1 text-basic bg-background rounded-full">
+      <div className="gap-2 flex flex-col justify-around">
+        <button className="h-6 text-basic bg-background rounded-full">
           Speaking
         </button>
-        <button className="p-1 text-basic bg-background rounded-full">
+        <button className="h-6 text-basic bg-background rounded-full">
           Writing
         </button>
-        <button className="p-1 text-basic bg-background rounded-full">
+        <button className="h-6 text-basic bg-background rounded-full">
           Comprehension
         </button>
       </div>
