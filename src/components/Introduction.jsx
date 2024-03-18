@@ -17,7 +17,7 @@ function Introduction() {
       </div>
       <div className="rightContent">
         <img
-          src="/images/salm.jpeg"
+          src="../assets/images/salm.jpeg"
           alt=""
           className="h-[60vh] rounded-t-full"
         />
