@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #070707;
+  color: #fff;
+}
+body {
+  margin: auto 2.5rem;
+}
+.active {
+  background-color: #ff9559;
+  color: #070707;
+  font-weight: 600;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  background-color: rgb(44, 44, 44);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+
+/* Instagram */
+.containerOne:hover {
+  background-color: #eb3a89;
+}
+
+/* Twitter */
+.containerTwo:hover {
+  background-color: #00acee;
+}
+
+/* Linkedin */
+.containerThree:hover {
+  background-color: #0072b1;
+}
+
+/* Whatsapp */
+.containerFour:hover {
+  background-color: #128c7e;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
