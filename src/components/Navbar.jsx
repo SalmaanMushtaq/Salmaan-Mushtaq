@@ -3,12 +3,12 @@ function Navbar() {
   return (
     <ul className="flex sm:justify-end sm:items-center gap-4 pt-20">
       <li>
-        <a href="#" className="p-1 px-6 bg-background rounded-full active">
+        <a href="#" className="p-1 px-6 bg-background rounded-full">
           Profile
         </a>
       </li>
       <li>
-        <a href="#" className="p-1 px-6 bg-background rounded-full">
+        <a href="#" className="p-1 px-6 bg-background rounded-full active">
           Portfolio
         </a>
       </li>

@@ -1,7 +1,7 @@
 function Introduction() {
   return (
-    <div className="mt-10 flex justify-between tracking-wide">
-      <div className="leftContent flex flex-col justify-end">
+    <div className="mt-10 flex flex-col sm:flex-row lg:flex-row justify-between tracking-wide items-center gap-4">
+      <div className="flex flex-col justify-end sm:w-full lg:w-2/3 md:w-full lg:pl-[15rem]">
         <p>
           Welcome <br /> I&apos;m{" "}
           <span className="rounded-full inline-block font-bold border-b-8 border-basic w-10"></span>
@@ -15,11 +15,11 @@ function Introduction() {
           Front End Developer
         </h5>
       </div>
-      <div className="rightContent">
+      <div className=" flex justify-center  items-center sm:w-full lg:w-1/2 md:w-full">
         <img
           src="../assets/images/salm.jpeg"
           alt=""
-          className="h-[60vh] rounded-t-full"
+          className="h-[66vh] rounded-t-full"
         />
       </div>
     </div>
