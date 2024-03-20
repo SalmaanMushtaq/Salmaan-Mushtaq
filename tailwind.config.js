@@ -7,6 +7,7 @@ export default {
         basic: "#ff9559",
         background: "rgb(44,44,44)",
         btnBackground: "rgb(7,7,7)",
+        formTextColor: "#5F5F5F",
       },
     },
   },

@@ -10,7 +10,15 @@
 }
 body {
   margin: auto 2rem;
+  /* font-family: "Roboto", sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Open Sans", sans-serif; */
+  /* font-family: "Lato", sans-serif; */
+  /* font-family: "Playfair Display", serif; */
+  font-family: "Merriweather", serif;
+  letter-spacing: 1px;
 }
+
 .active {
   background-color: #ff9559;
   color: #070707;
@@ -19,8 +27,8 @@ body {
 
 /* for all social containers*/
 .socialContainer {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: flex;
   background-color: rgb(44, 44, 44);
   border-radius: 50%;
