@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import styles from "./Navbar.module.css";
+// FaSun
+import { FaMoon } from "react-icons/fa";
 
 function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
@@ -14,33 +17,49 @@ function Navbar() {
       {/* Navigation links */}
       <ul className="flex gap-4">
         <li>
-          <a href="#" className="p-1 px-6 bg-background rounded-full">
+          <NavLink
+            to="/"
+            className="p-1 px-6 bg-background rounded-full
+          hover:shadow-[0px_0px_2px_10px] hover:shadow-yellow-950  hover:outline-none hover:ring-2 hover:ring-basic hover:ring-offset-2 hover:ring-offset-btnBackground"
+          >
             Profile
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#" className="p-1 px-6 bg-background rounded-full">
+          <NavLink
+            to="/portfolio"
+            className="p-1 px-6 bg-background rounded-full
+            hover:shadow-[0px_0px_2px_10px] hover:shadow-yellow-950 hover:outline-none hover:ring-2 hover:ring-basic hover:ring-offset-2 hover:ring-offset-btnBackground"
+          >
             Portfolio
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#" className="p-1 px-6 bg-background rounded-full active">
+          <NavLink
+            to="/contact"
+            className="p-1 px-6 bg-background rounded-full 
+           hover:shadow-[0px_0px_2px_10px] hover:shadow-yellow-950 hover:outline-none hover:ring-2 hover:ring-basic hover:ring-offset-2 hover:ring-offset-btnBackground"
+          >
             Contact
-          </a>
+          </NavLink>
+        </li>
+        {/* Dark mode/light mode toggle */}
+        {/* Dark mode/light mode toggle */}
+        <li>
+          <label className={styles.switch}>
+            <input
+              type="checkbox"
+              checked={darkMode}
+              onChange={toggleDarkMode}
+            />
+            <span className={styles.slider}>
+              {darkMode && (
+                <FaMoon className="w-[25px] h-auto p-[4px] bg-transparent" />
+              )}
+            </span>
+          </label>
         </li>
       </ul>
-      {/* Add dark mode/light mode toggle icon */}
-      {darkMode ? (
-        <FaSun
-          className="text-yellow-500 text-2xl cursor-pointer"
-          onClick={toggleDarkMode}
-        />
-      ) : (
-        <FaMoon
-          className="text-gray-500 text-2xl cursor-pointer"
-          onClick={toggleDarkMode}
-        />
-      )}
     </nav>
   );
 }
