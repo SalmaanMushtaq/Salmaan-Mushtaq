@@ -1,16 +1,16 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import styles from "./Navbar.module.css";
+// import styles from "./Navbar.module.css";
 // FaSun
-import { FaMoon } from "react-icons/fa";
+// import { FaMoon } from "react-icons/fa";
 
 function Navbar() {
-  const [darkMode, setDarkMode] = useState(true);
+  // const [darkMode, setDarkMode] = useState(true);
 
-  const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
-    // Here you can toggle your application's theme or update any other styles accordingly
-  };
+  // const toggleDarkMode = () => {
+  //   setDarkMode((prevMode) => !prevMode);
+  //   // Here you can toggle your application's theme or update any other styles accordingly
+  // };
 
   return (
     <nav className="flex sm:justify-end sm:items-center gap-4 pt-20 pb-3">
@@ -44,8 +44,7 @@ function Navbar() {
           </NavLink>
         </li>
         {/* Dark mode/light mode toggle */}
-        {/* Dark mode/light mode toggle */}
-        <li>
+        {/* <li>
           <label className={styles.switch}>
             <input
               type="checkbox"
@@ -58,7 +57,7 @@ function Navbar() {
               )}
             </span>
           </label>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
