@@ -4,9 +4,6 @@ import { Suspense, lazy } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SpinnerFullPage from "./components/SpinnerFullPage";
-// import Portfolio from "./pages/Portfolio";
-// import Contact from "./pages/Contact";
-// import ProfilePage from "./pages/ProfilePage";
 const Profile = lazy(() => import("./pages/ProfilePage"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -14,7 +11,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Suspense fallback={<SpinnerFullPage />}>
           <Navbar />
           <main className="flex-grow">
@@ -28,15 +25,6 @@ function App() {
         </Suspense>
       </BrowserRouter>
     </div>
-    // <div className="flex flex-col min-h-screen">
-    //   <Navbar />
-    //   <main className="flex-grow">
-    //     {/* <ProfilePage /> */}
-    //     {/* <Portfolio /> */}
-    //     <Contact />
-    //   </main>
-    //   <Footer />
-    // </div>
   );
 }
 
