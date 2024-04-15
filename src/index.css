@@ -126,3 +126,9 @@ body {
     transform: rotateY(360deg);
   }
 }
+.Toastify__toast-body {
+  background-color: transparent;
+}
+.Toastify__close-button svg {
+  background-color: transparent;
+}

@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -11,12 +13,12 @@ const Contact = lazy(() => import("./pages/Contact"));
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      <BrowserRouter basename="/">
+      <BrowserRouter>
         <Suspense fallback={<SpinnerFullPage />}>
           <Navbar />
           <main className="flex-grow">
             <Routes>
-              <Route path="/" element={<Profile />} />
+              <Route path="profile" element={<Profile />} />
               <Route path="portfolio" element={<Portfolio />} />
               <Route path="contact" element={<Contact />} />
             </Routes>
@@ -24,6 +26,19 @@ function App() {
           <Footer />
         </Suspense>
       </BrowserRouter>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        style={{ backgroundColor: "transparent" }}
+      />
     </div>
   );
 }
